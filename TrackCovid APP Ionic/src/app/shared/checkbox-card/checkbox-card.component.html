@@ -1,0 +1,16 @@
+<div class="card-container" (click)="onClick()">
+  <div class="card-body" fxLayout="row" fxFlex="grow">
+    <div class="checkbox-btn">
+      <label>
+        <input class="quiz-checkbox" type="checkbox" disabled="true" [(ngModel)]="checked" />
+        <span class="check"></span>
+      </label>
+    </div>
+
+    <div class="state-description">
+      <div class="state-title">
+        <span>{{ state }}</span>
+      </div>
+    </div>
+  </div>
+</div>

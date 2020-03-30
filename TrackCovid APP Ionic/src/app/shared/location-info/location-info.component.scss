@@ -1,0 +1,43 @@
+.location-info-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-area {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.postal-code-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.marker-icon {
+  padding-left: 16px;
+}
+
+.postal-code {
+  color: #3f3d56;
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.reports-info {
+  font-size: 15px;
+  color: #979797;
+}
+
+@media (min-width: 768px) {
+  .profile-area {
+    font-size: 24px;
+  }
+
+  .location-info-area {
+    justify-content: start;
+  }
+}

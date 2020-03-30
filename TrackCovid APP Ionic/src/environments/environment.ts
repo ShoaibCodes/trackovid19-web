@@ -2,8 +2,16 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const SERVER_URL = 'https://2ceesuwr5l.execute-api.eu-west-1.amazonaws.com/dev';
+// const SERVER_URL = 'https://dev.api.covidografia.pt';
+
 export const environment = {
-  production: false
+  production: false,
+  serverURL: SERVER_URL,
+  apiUrl: SERVER_URL + '/api/v1/',
+  facebookAPI: '142877133789647',
+  serverPublicKey:
+    'BA5Tr13lfJCBPb9ZaXlTKUetDORnHROGI_S7cumwdDR9f-ZxYI-4Y2OvIC4WgZxcanE9znpKufP6wLA5kdIG2Ak',
 };
 
 /*

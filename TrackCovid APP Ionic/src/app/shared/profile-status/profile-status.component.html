@@ -1,0 +1,4 @@
+<div class="profile_status" *ngFor="let stat of statusList" [title]="stat.tooltip">
+  <div class="profile_status_indicator" [style.backgroundColor]="stat.color"></div>
+  <span>{{ stat.text }}</span>
+</div>

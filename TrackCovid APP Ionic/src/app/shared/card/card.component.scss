@@ -1,0 +1,99 @@
+.card {
+  padding: 18px 16px;
+  background: linear-gradient(0deg, rgba(48, 195, 215, 0.09), rgba(48, 195, 215, 0.09)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+  border-radius: 16px;
+
+  .card-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .counter {
+      font-size: 29px;
+      line-height: 110%;
+    }
+
+    .label {
+      font-size: 12px;
+      line-height: 120%;
+    }
+
+    img {
+      width: 34px;
+      height: 28px;
+    }
+  }
+}
+
+.orange {
+  background: linear-gradient(0deg, rgba(250, 100, 0, 0.07), rgba(250, 100, 0, 0.07)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.red {
+  background: linear-gradient(0deg, rgba(250, 0, 0, 0.05), rgba(250, 0, 0, 0.05)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.green {
+  background: linear-gradient(0deg, rgba(86, 214, 27, 0.07), rgba(86, 214, 27, 0.07)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+
+.purple {
+  background: linear-gradient(0deg, rgba(107, 104, 252, 0.09), rgba(107, 104, 252, 0.09)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+.blue {
+  background: linear-gradient(0deg, rgba(48, 195, 215, 0.09), rgba(48, 195, 215, 0.09)),
+    linear-gradient(90deg, #fdfbfb 0%, #ebedee 100%);
+}
+.card-lg {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  border-radius: 30px;
+
+  .card-body {
+    height: 112px;
+  }
+  .counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+  img {
+    width: 32px;
+    height: 26px;
+    display: flex;
+    align-self: flex-start;
+  }
+  span {
+    color: #1e2933;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  hr {
+    margin: 0px;
+    border: 1px solid #979797;
+  }
+  p {
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    color: #000000;
+    line-height: 120%;
+  }
+  .status {
+    font-family: Archivo;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    color: #000000;
+  }
+}

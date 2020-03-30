@@ -1,7 +1,6 @@
 {
-  "name": "TrackCovid",
+  "name": "covidografia-ionic",
   "integrations": {
-    "capacitor": {},
     "cordova": {}
   },
   "type": "angular"

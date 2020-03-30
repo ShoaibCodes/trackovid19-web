@@ -1,0 +1,70 @@
+<app-basic-modal
+  *ngIf="showShare"
+  [closable]="true"
+  [opened]="showShare"
+  [closeCallback]="closeCallback"
+  [minHeight]="true"
+>
+  <div class="share-container">
+    <div class="title">
+      <span>{{ video.title }}</span>
+    </div>
+    <div class="sub-title">
+      <span>{{ video.description }}</span>
+    </div>
+
+    <div class="share-video-container">
+      <iframe
+        [src]="iframe"
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
+    </div>
+    <div class="footer-text">
+      <span>Ajuda-nos partilhando o Covidografia com os teus amigos e conhecidos.</span>
+    </div>
+
+    <div class="footer-share">
+      <!-- Facebook -->
+      <div *ngIf="video.share.facebook" id="facebook" class="icon-share" (click)="shareFacebook()">
+        <img src="assets/img/icons/fb-share-icon.svg" />
+      </div>
+
+      <!-- Whatsapp -->
+      <div *ngIf="video.share.whatsapp" id="whatsapp" class="icon-share" (click)="shareWhatsapp()">
+        <img src="assets/img/icons/whatsapp-share-icon.svg" />
+      </div>
+
+      <!-- Facebook messenger -->
+      <!-- TODO: This needs to be reviewed -->
+      <!-- <div
+            *ngIf="video.share.messenger"
+            id="facebook-messenger"
+            class="icon-share"
+            (click)="shareFacebookMessenger()"
+          >
+            <img src="assets/img/icons/facebook-messenger-share-icon.svg" />
+          </div> -->
+
+      <!-- Linkedin -->
+      <div *ngIf="video.share.linkedin" id="linkedin" class="icon-share" (click)="shareLinkedIn()">
+        <img src="assets/img/icons/linkedin-share-icon.svg" />
+      </div>
+
+      <!-- Twitter -->
+      <div *ngIf="video.share.twitter" id="twitter" class="icon-share" (click)="shareTwitter()">
+        <img src="assets/img/icons/twitter-share-icon.svg" />
+      </div>
+
+      <!-- Copy link+text/copy -->
+      <div
+        *ngIf="video.share.copyText"
+        id="copy-link-text"
+        class="icon-share"
+        (click)="shareCopyLinkText()"
+      >
+        <img src="assets/img/icons/copy-link-text-share-icon.svg" />
+      </div>
+    </div>
+  </div>
+</app-basic-modal>

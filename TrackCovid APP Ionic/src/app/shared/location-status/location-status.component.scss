@@ -1,0 +1,37 @@
+.location-status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 8px 0;
+
+  app-card {
+    margin-bottom: 1rem;
+  }
+}
+
+:ng-deep app-card .card,
+app-card .card-lg {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  height: 226px;
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .location-status {
+    padding: 22px 0;
+  }
+}
+
+@media (min-width: 959px) {
+  .location-status {
+    justify-content: flex-start;
+
+    app-card {
+      flex-basis: calc(33.3% - 1rem);
+      margin: 0 1rem 1rem 0;
+    }
+  }
+}
