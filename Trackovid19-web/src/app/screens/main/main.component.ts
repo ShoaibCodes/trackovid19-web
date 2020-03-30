@@ -23,6 +23,7 @@ export class MainComponent implements OnInit, OnDestroy {
   confinementState: ConfinementState = null;
   showShare = false;
   showNotificationModal = false;
+  showConfirmDeleteUserModal = false;
   sub: PushSubscription;
 
   readonly VAPID_PUBLIC_KEY = environment.serverPublicKey;
@@ -31,6 +32,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
   public toggleShareCallback: Function;
   public toggleNotificationModalCallback: Function;
+  public toggleConfirmDeleteUserModalCallback: Function;
   public subscribeToNotificationsCallback: Function;
 
   constructor(
@@ -45,6 +47,7 @@ export class MainComponent implements OnInit, OnDestroy {
   ) {
     this.toggleShareCallback = this.toggleShare.bind(this);
     this.toggleNotificationModalCallback = this.toggleNotification.bind(this);
+    this.toggleConfirmDeleteUserModalCallback = this.toggleConfirmDeleteUser.bind(this);
     this.subscribeToNotificationsCallback = this.subscribeToNotifications.bind(this);
 
     router.events.forEach(event => {
@@ -154,14 +157,13 @@ export class MainComponent implements OnInit, OnDestroy {
     this.showNotificationModal = false;
   }
 
-  public sendDeleteAccountEmail() {
-    const email = 'remover@covidografia.pt';
-    const subject = 'Pedido de Remoção de Conta e Dados Pessoais';
-    const emailBody =
-      'Desejo que a minha conta e os meus dados pessoais na aplicação covidografia sejam removidos com efeito imediato. Os meus identificadores são: %0D%0A' +
-      `E-mail: ${this.user.email} %0D%0A` +
-      `Id-notificação: personal-${this.user.personal_hash} %0D%0A` +
-      `Id-dados: health-${this.user.health_hash}`;
-    window.location.href = 'mailto:' + email + '?subject=' + subject + '&body=' + emailBody;
+  public showConfirmDeleteUser() {
+    this.showConfirmDeleteUserModal = true;
+    console.log(this.showConfirmDeleteUserModal);
+  }
+
+  public toggleConfirmDeleteUser() {
+    this.showConfirmDeleteUserModal = !this.showConfirmDeleteUserModal;
+    console.log(this.showConfirmDeleteUserModal);
   }
 }

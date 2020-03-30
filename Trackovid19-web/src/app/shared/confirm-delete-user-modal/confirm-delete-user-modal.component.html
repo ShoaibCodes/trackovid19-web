@@ -1,0 +1,21 @@
+<app-basic-modal
+  *ngIf="showModal"
+  [closable]="true"
+  [opened]="showModal"
+  [closeCallback]="closeCallback"
+  [greyBackground]="true"
+>
+  <div class="container">
+    <div class="image"><img src="assets/img/icons/bell.svg" /></div>
+    <span class="red">Tem a certeza que quer apagar asua conta</span>
+    <span>Ative as notificações para o relembrarmos de atualizar o seu estado diariamente.</span>
+
+    <button class="close-button" (click)="close()">
+      <span class="text">Cancelar</span>
+    </button>
+
+    <button class="accept-button" (click)="deleteUser()">
+      <span class="text">Apagar</span>
+    </button>
+  </div>
+</app-basic-modal>
